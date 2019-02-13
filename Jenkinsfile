@@ -6,11 +6,12 @@ pipeline
        
         stage ('compile stages'){      
         steps{
-        withMaven(maven : 'maven-3')
-        {
-        sh 'mvn clean'
+        
+          echo 'hello hi there..!'
+          
+          
         }
-        }
+          
         }
     
     }
