@@ -4,31 +4,22 @@ pipeline
     
     stages {
        
-        stage ('compile stages'){      
-        steps{
-        
+        stage ('compile stages')
+		{      
+        steps
+		{
           echo 'hello hi there..!'
-          
-          
         }
-          
-          stage ('compile stage'){      
-        steps{
-        
+        } 
+        stage ('compile stage')
+		{      
+        steps
+		{
           echo 'hello hi there..!'
-          
-          
         }
-            
-            
-            stage ('compile staes'){      
-        steps{
+		}		
+ 
         
-          echo 'hello hi there..!'
-           
-        }
-          
-        }
     
     }
  }
