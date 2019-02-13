@@ -21,6 +21,7 @@ node
 	stage('docker push to docker hub')
 		{
 		sh 'docker login -u naveendockertt -p asdf1345'
+		sh 'docker push $JOB_NAME:v1.$BUILD_ID'
 		}
 	
 	
