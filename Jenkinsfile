@@ -12,7 +12,7 @@ pipeline
           
         }
           
-          stage ('compile stages'){      
+          stage ('compile stage'){      
         steps{
         
           echo 'hello hi there..!'
@@ -21,7 +21,7 @@ pipeline
         }
             
             
-            stage ('compile stages'){      
+            stage ('compile staes'){      
         steps{
         
           echo 'hello hi there..!'
