@@ -4,7 +4,7 @@ pipeline
     
     stages {
        
-        stage ('compile stages')
+        stage ('compile')
 		{      
         steps
 		{
