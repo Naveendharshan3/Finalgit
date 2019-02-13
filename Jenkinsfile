@@ -8,7 +8,7 @@ pipeline
 		{      
         steps
 		{
-          echo 'hello hi there..!'
+          echo 'hello hi there...!'
         }
         } 
         stage ('compile stage')
