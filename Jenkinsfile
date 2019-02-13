@@ -13,9 +13,14 @@ node
         }
 	
 	
-	stage('build image')
+	stage('docker images')
 		{
 		sh 'docker build -t $JOB_NAME:v1.$BUILD_ID .'
+		}
+	
+	stage('docker push to docker hub')
+		{
+		sh 'docker login -u naveendockertt -p asdf1345'
 		}
 	
 	
