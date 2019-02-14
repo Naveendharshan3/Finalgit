@@ -23,15 +23,13 @@ node
 	stage('docker push to docker hub')
 		{
 			
-			docker.withRegistry('https://636658394677.dkr.ecr.us-east-1.amazonaws.com/newrepos','ecr:us-east-1:ecr-credentials')
+			docker.withRegistry('https://636658394677.dkr.ecr.us-east-1.amazonaws.com/jenkinsrepo','ecr:us-east-1:ecr-credentials')
 			{
 			sh  'docker tag $JOB_NAME:v1.$BUILD_ID 636658394677.dkr.ecr.us-east-1.amazonaws.com/$JOB_NAME:v1.$BUILD_ID'
 				
 			sh  'docker tag $JOB_NAME:v1.$BUILD_ID 636658394677.dkr.ecr.us-east-1.amazonaws.com/$JOB_NAME:latest'
 			
-			sh 'docker push 636658394677.dkr.ecr.us-east-1.amazonaws.com/$JOB_NAME:$BUILD_ID'
 			
-			sh 'docker push 636658394677.dkr.ecr.us-east-1.amazonaws.com/$JOB_NAME:latest'
 			
 			}
 		}
