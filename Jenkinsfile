@@ -21,9 +21,9 @@ node
 	stage('docker push to docker hub')
 		{
 			
-			docker.withRegistry('https://636658394677.dkr.ecr.us-east-1.amazonaws.com/newrepos','ecr:us-east-1:demo-credentials')
+			docker.withRegistry('https://636658394677.dkr.ecr.us-east-1.amazonaws.com/newrepos','ecr:us-east-1:ecr-credentials')
 			{
-			sh 'aws ecr get-login --no-include-email --region us-east-1'	
+			
 			}
 		}
 	
