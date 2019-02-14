@@ -20,8 +20,11 @@ node
 	
 	stage('docker push to docker hub')
 		{
-		sh 'docker login -u naveendockertt -p asdf1345'
-		sh 'docker push $JOB_NAME:v1.$BUILD_ID'
+			
+			docker.withRegistry('https://636658394677.dkr.ecr.us-east-1.amazonaws.com/newrepos','ecr:aws')
+			{
+			sh 'aws ecr get-login --no-include-email --region us-east-1'	
+			}
 		}
 	
 	
