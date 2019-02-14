@@ -15,7 +15,7 @@ node
 	
 	stage('docker images')
 		{
-		sh 'docker build -t $JOB_NAME .'
+		sh 'docker build -t jenkinsrepo .'
 		
 		}
 	
