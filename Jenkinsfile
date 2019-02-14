@@ -28,7 +28,7 @@ node
 				
 			sh  'docker tag jenkinsrepo:latest 636658394677.dkr.ecr.us-east-1.amazonaws.com/jenkinsrepo:latest'
 				
-				sh 'docker push 636658394677.dkr.ecr.us-east-1.amazonaws.com/$JOB_NAME:v1.$BUILD_ID'
+				sh 'docker push 636658394677.dkr.ecr.us-east-1.amazonaws.com/jenkinsrepo:latest'
 			
 			
 			
