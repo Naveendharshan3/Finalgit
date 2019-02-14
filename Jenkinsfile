@@ -15,7 +15,7 @@ node
 	
 	stage('docker images')
 		{
-		sh 'docker build .'
+		sh 'docker build -t naveen .'
 		}
 	
 	
