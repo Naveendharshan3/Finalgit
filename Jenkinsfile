@@ -15,17 +15,10 @@ node
 	
 	stage('docker images')
 		{
-		sh 'docker build -t $JOB_NAME:v1.$BUILD_ID .'
+		sh 'docker build .'
 		}
 	
-	stage('docker push to docker hub')
-		{
-			
-			docker.withRegistry('https://636658394677.dkr.ecr.us-east-1.amazonaws.com/newrepos','ecr:us-east-1:ecr-credentials')
-			{
-			docker.image($JOB_NAME:v1.$BUILD_ID).push()
-			}
-		}
+	
 	
 	
 	
