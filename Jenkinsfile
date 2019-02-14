@@ -31,6 +31,12 @@ node
 		}
 	
 	
+	stage('docker push to docker hub')
+		{
+			
+			sh  'docker run -p 8080:8080 --name naveen naveen --rm 636658394677.dkr.ecr.us-east-1.amazonaws.com/newrepos'
+			
+		}
 	
 	
 }
