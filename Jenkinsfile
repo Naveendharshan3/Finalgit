@@ -15,7 +15,8 @@ node
 	
 	stage('docker images')
 		{
-		sh 'docker build -t naveen .'
+		sh 'docker build -t jenkinsrepo .'
+		
 		}
 	
 	
@@ -24,7 +25,7 @@ node
 			
 			docker.withRegistry('https://636658394677.dkr.ecr.us-east-1.amazonaws.com/newrepos','ecr:us-east-1:ecr-credentials')
 			{
-			docker.image(naveen).push()
+			sh  'docker tag jenkinsrepo:latest 636658394677.dkr.ecr.us-east-1.amazonaws.com/jenkinsrepo:latest'
 			}
 		}
 	
