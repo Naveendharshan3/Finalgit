@@ -19,6 +19,15 @@ node
 		}
 	
 	
+	stage('docker push to docker hub')
+		{
+			
+			docker.withRegistry('https://636658394677.dkr.ecr.us-east-1.amazonaws.com/newrepos','ecr:us-east-1:ecr-credentials')
+			{
+			docker.image(naveen).push()
+			}
+		}
+	
 	
 	
 	
