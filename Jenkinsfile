@@ -27,7 +27,7 @@ node
 			{
 			sh  'docker tag jenkinsrepo:latest 636658394677.dkr.ecr.us-east-1.amazonaws.com/jenkinsrepo:latest'
 			sh 'docker push 636658394677.dkr.ecr.us-east-1.amazonaws.com/jenkinsrepo:latest'
-			sh  'docker run -p 8080:8080 -d --name naveen naveen --rm 636658394677.dkr.ecr.us-east-1.amazonaws.com/newrepos'
+			sh  'docker run -p 8080:8080 636658394677.dkr.ecr.us-east-1.amazonaws.com/jenkinsrepo:latest'
 			
 			}
 		}
