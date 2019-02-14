@@ -27,7 +27,6 @@ node
 			{
 			sh  'docker tag $JOB_NAME:latest 636658394677.dkr.ecr.us-east-1.amazonaws.com/$JOB_NAME:latest'
 			sh 'docker push 636658394677.dkr.ecr.us-east-1.amazonaws.com/$JOB_NAME:latest'
-			sh  'docker run -p 8080:8080 636658394677.dkr.ecr.us-east-1.amazonaws.com/$JOB_NAME:latest'
 			
 			}
 		}
