@@ -27,7 +27,7 @@ node
 			{
 			sh  'docker tag $JOB_NAME:v1.$BUILD_ID 636658394677.dkr.ecr.us-east-1.amazonaws.com/$JOB_NAME:v1.$BUILD_ID'
 			
-			sh 'docker push $JOB_NAME:v1.$BUILD_ID 636658394677.dkr.ecr.us-east-1.amazonaws.com/$JOB_NAME:v1.$BUILD_ID'
+			sh 'docker push 636658394677.dkr.ecr.us-east-1.amazonaws.com/$JOB_NAME:$BUILD_ID'
 			
 			}
 		}
